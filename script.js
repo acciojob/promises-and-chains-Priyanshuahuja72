@@ -1,21 +1,20 @@
-//your JS code here. If required.
 let formbutton = document.getElementById("btn");
 function promiseApi1(name , age)
 {
  return new Promise((resolve , reject) => {
-    if(age > 18)
-    {
         setTimeout(() => {
-            resolve(
-                alert(`welcome , ${name}, You can vote`)
-                // console.log(`You can vote , ${name}`)
-            )
+            if(age > 18)
+            {
+                resolve(
+                    alert(`welcome , ${name}, You can vote`)
+                    // console.log(`You can vote , ${name}`)
+                )
+            }
+            else
+            {
+                 alert(`Oh sorry ${name}. You aren't old enough.`)
+            }
         } , 4000)
-    }
-    else
-    {
-        alert(`Oh sorry ${name}. You aren't old enough.`)
-    }
  })
 }
 formbutton.addEventListener("click" , (event) => {
