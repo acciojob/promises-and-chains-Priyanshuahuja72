@@ -6,7 +6,7 @@ function promiseApi1(name , age)
             if(age > 18)
             {
                 resolve(
-                    alert(`welcome , ${name}, You can vote`)
+                    alert(`Welcome, ${name}. You can vote.`)
                     // console.log(`You can vote , ${name}`)
                 )
             }
@@ -22,7 +22,7 @@ formbutton.addEventListener("click" , (event) => {
     let nameinput = document.getElementById("name").value;
     let ageinput = document.getElementById("age").value;
     if (nameinput == "" && ageinput == "") {
-        alert("It should not be empty")
+        alert("Please enter valid details")
     }
     else
     {
